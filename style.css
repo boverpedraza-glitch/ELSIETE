@@ -1,0 +1,1031 @@
+/* =================================
+   RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #0b0b0b;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+:root {
+    --black: #0b0b0b;
+    --dark: #121212;
+    --card: #1a1a1a;
+    --cream: #f4eee3;
+    --gold: #d7a84b;
+    --white: #ffffff;
+    --muted: #999999;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(11, 11, 11, 0.94);
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+    font-family: "DM Serif Display", serif;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.logo span,
+.footer-logo span {
+    color: var(--gold);
+}
+
+.header nav {
+    display: flex;
+    gap: 30px;
+}
+
+.header nav a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.header nav a:hover {
+    color: var(--gold);
+}
+
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =================================
+   HERO
+================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.88),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    color: #ffffff;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 900px;
+
+    padding: 130px 8% 80px;
+
+    color: #ffffff;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    color: #ffffff;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: clamp(80px, 13vw, 170px);
+
+    line-height: 0.82;
+    letter-spacing: -3px;
+
+    margin-bottom: 35px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero-text {
+    color: #ffffff;
+
+    max-width: 570px;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    margin-bottom: 40px;
+}
+
+
+/* =================================
+   BOTONES
+================================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 16px 30px;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    transition: all 0.3s ease;
+}
+
+.button-main {
+    background: var(--gold);
+
+    color: #000000 !important;
+
+    border: 1px solid var(--gold);
+
+    box-shadow:
+        0 8px 25px rgba(215, 168, 75, 0.2);
+}
+
+.button-main:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+
+    color: #000000 !important;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(255, 255, 255, 0.15);
+}
+
+.button-outline {
+    background: transparent;
+
+    border: 1px solid #ffffff;
+
+    color: #ffffff !important;
+}
+
+.button-outline:hover {
+    background: #ffffff;
+
+    color: #000000 !important;
+
+    transform: translateY(-3px);
+}
+
+
+/* =================================
+   SECCIONES
+================================= */
+
+.section {
+    padding: 110px 8%;
+}
+
+.section-header {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 60px;
+}
+
+.section-header h2 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: clamp(50px, 7vw, 90px);
+
+    color: #ffffff;
+
+    line-height: 0.9;
+
+    margin-bottom: 20px;
+}
+
+.section-header p:last-child {
+    color: var(--muted);
+
+    line-height: 1.7;
+}
+
+
+/* =================================
+   ABOUT
+================================= */
+
+.about {
+    background: var(--cream);
+
+    color: #111111;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.about .eyebrow {
+    color: #8f681d;
+}
+
+.about h2 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: clamp(55px, 7vw, 100px);
+
+    line-height: 0.9;
+
+    margin-bottom: 30px;
+}
+
+.about h2 span {
+    color: #a77a24;
+}
+
+.about-text p:not(.eyebrow) {
+    max-width: 600px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+
+    color: #555555;
+}
+
+.about-card {
+    background: #111111;
+
+    color: #ffffff;
+
+    padding: 60px;
+
+    min-height: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.about-card .number {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 100px;
+
+    color: var(--gold);
+
+    line-height: 1;
+}
+
+.about-card h3 {
+    font-size: 25px;
+
+    margin: 20px 0 8px;
+}
+
+.about-card p {
+    color: #aaaaaa;
+}
+
+
+/* =================================
+   MENÚ
+================================= */
+
+.menu {
+    background: var(--dark);
+}
+
+.menu-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.menu-card {
+    background: var(--card);
+
+    padding: 40px 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--gold);
+}
+
+.menu-card.featured {
+    border-color: var(--gold);
+}
+
+.menu-card > span {
+    color: var(--gold);
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+.menu-card h3 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 38px;
+
+    margin: 20px 0 30px;
+}
+
+.menu-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 18px 0;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-item strong {
+    font-weight: 500;
+}
+
+.menu-item b {
+    color: var(--gold);
+
+    white-space: nowrap;
+}
+
+
+/* =================================
+   GALERÍA
+================================= */
+
+.gallery-section {
+    background: #0b0b0b;
+}
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.gallery-item {
+    height: 450px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background: #151515;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+
+/* =================================
+   UBICACIÓN
+================================= */
+
+.location {
+    background: var(--cream);
+
+    color: #111111;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.location .eyebrow {
+    color: #8f681d;
+}
+
+.location h2 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: clamp(55px, 7vw, 95px);
+
+    line-height: 0.9;
+
+    margin-bottom: 35px;
+}
+
+.location h2 span {
+    color: #a77a24;
+}
+
+.address {
+    margin-bottom: 30px;
+
+    color: #555555;
+
+    line-height: 1.8;
+}
+
+.map {
+    width: 100%;
+
+    height: 450px;
+
+    overflow: hidden;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+
+/* =================================
+   CONTACTO
+================================= */
+
+.contact {
+    background: #111111;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.contact h2 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: clamp(60px, 8vw, 110px);
+
+    line-height: 0.85;
+}
+
+.contact h2 span {
+    color: var(--gold);
+}
+
+.contact-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+.contact-box {
+    padding: 25px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-box small {
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.contact-box a {
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+.contact-box p {
+    color: #aaaaaa;
+
+    line-height: 1.6;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    background: #070707;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-logo {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: var(--muted);
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+footer small {
+    color: #555555;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    .section {
+        padding: 90px 6%;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .location {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+}
+
+
+/* =================================
+   MÓVIL
+================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        height: 65px;
+
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .menu-button {
+        display: block;
+
+        font-size: 26px;
+
+        padding: 5px;
+    }
+
+    .header nav {
+        position: absolute;
+
+        top: 65px;
+        left: 0;
+
+        width: 100%;
+
+        background: #0b0b0b;
+
+        display: none;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        border-top:
+            1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .header nav.active {
+        display: flex;
+    }
+
+    .header nav a {
+        padding: 18px 20px;
+
+        font-size: 15px;
+
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.08);
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 100svh;
+
+        background-position: center;
+    }
+
+    .hero-content {
+        width: 100%;
+
+        padding:
+            110px
+            22px
+            50px;
+    }
+
+    .hero .eyebrow {
+        font-size: 10px;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 15px;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+
+        line-height: 0.82;
+
+        letter-spacing: -2px;
+
+        margin-bottom: 25px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+
+        line-height: 1.6;
+
+        max-width: 330px;
+
+        margin-bottom: 30px;
+    }
+
+
+    /* BOTONES */
+
+    .hero-buttons {
+        width: 100%;
+
+        max-width: 100%;
+
+        gap: 12px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .hero-buttons .button {
+        width: 100%;
+
+        padding: 15px 18px;
+
+        font-size: 12px;
+
+        text-align: center;
+    }
+
+
+    /* SECCIONES */
+
+    .section {
+        padding: 70px 20px;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+        font-size: 52px;
+
+        line-height: 0.9;
+    }
+
+    .section-header p:last-child {
+        font-size: 14px;
+    }
+
+
+    /* ABOUT */
+
+    .about {
+        display: block;
+    }
+
+    .about h2 {
+        font-size: 54px;
+
+        margin-bottom: 25px;
+    }
+
+    .about-text p:not(.eyebrow) {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .about-card {
+        margin-top: 40px;
+
+        min-height: 230px;
+
+        padding: 35px;
+    }
+
+    .about-card .number {
+        font-size: 70px;
+    }
+
+
+    /* MENÚ */
+
+    .menu-grid {
+        display: block;
+    }
+
+    .menu-card {
+        margin-bottom: 18px;
+
+        padding: 28px 22px;
+    }
+
+    .menu-card h3 {
+        font-size: 34px;
+
+        margin: 15px 0 20px;
+    }
+
+    .menu-item {
+        padding: 15px 0;
+
+        font-size: 14px;
+    }
+
+
+    /* GALERÍA */
+
+    .gallery {
+        display: block;
+    }
+
+    .gallery-item {
+        width: 100%;
+
+        height: 300px;
+
+        margin-bottom: 15px;
+
+        border-radius: 2px;
+    }
+
+    .gallery-item img {
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+
+    /* UBICACIÓN */
+
+    .location {
+        display: block;
+    }
+
+    .location h2 {
+        font-size: 54px;
+    }
+
+    .address {
+        font-size: 15px;
+
+        margin-bottom: 25px;
+    }
+
+    .location .button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .map {
+        width: 100%;
+
+        height: 300px;
+
+        margin-top: 35px;
+    }
+
+    .map iframe {
+        width: 100%;
+
+        height: 100%;
+    }
+
+
+    /* CONTACTO */
+
+    .contact {
+        display: block;
+    }
+
+    .contact h2 {
+        font-size: 58px;
+
+        margin-bottom: 40px;
+    }
+
+    .contact-info {
+        width: 100%;
+    }
+
+    .contact-box {
+        padding: 22px;
+    }
+
+    .contact-box a {
+        font-size: 19px;
+    }
+
+    .contact-info .button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 45px 20px;
+    }
+
+    .footer-logo {
+        font-size: 34px;
+    }
+
+}
+
+
+/* =================================
+   MÓVILES MUY PEQUEÑOS
+================================= */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero-content {
+        padding-left: 18px;
+
+        padding-right: 18px;
+    }
+
+    .section {
+        padding-left: 18px;
+
+        padding-right: 18px;
+    }
+
+    .section-header h2,
+    .about h2,
+    .location h2 {
+        font-size: 47px;
+    }
+
+    .contact h2 {
+        font-size: 50px;
+    }
+
+}
